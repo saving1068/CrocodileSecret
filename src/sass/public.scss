@@ -1,0 +1,443 @@
+@charset "utf-8";
+
+/* 禁用iPhone中Safari的字号自动调整 */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+/* 去除iPhone中默认的input样式 */
+
+
+/*input[type="submit"], input[type="reset"], input[type="button"], input{ -webkit-appearance:none; resize: none; }*/
+
+
+/* 取消链接高亮  */
+
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* 设置HTML5元素为块 */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+/* 图片自适应 */
+
+img {
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+    /*为了照顾ie图片缩放失真*/
+}
+
+body,
+div,
+a,
+ul,
+ol,
+li,
+nav,
+header,
+footer,
+span,
+em,
+strong,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+img,
+form,
+input,
+button,
+label,
+textarea,
+table,
+tr,
+th,
+td,
+dl,
+dt,
+dd {
+    margin: 0px;
+    padding: 0px;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    /* Safari */
+    font-family: "microsoft yahei", Arial, Helvetica, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+
+*:not(input, textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+table tr,
+table td {
+    border: none;
+}
+
+a,
+img {
+    -webkit-touch-callout: none;
+    /* 禁止长按链接与图片弹出菜单 */
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button,
+input {
+    outline: none;
+    background: none;
+    border: 0px;
+    border-radius: 0;
+}
+
+input[type=button],
+input[type=text],
+input[type=password],
+input[type=date],
+input[type=search],{
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: #000;
+    outline: none
+}
+
+input[type=number] {  
+    -moz-appearance:textfield;  
+}  
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button {  
+    -webkit-appearance: none;  
+    margin: 0;  
+}  
+
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    outline: none;
+    vertical-align: sub;
+}
+
+em {
+    font-style: normal;
+    font-weight: normal;
+}
+
+strong {
+    font-style: normal;
+}
+
+i {
+    font-style: normal;
+}
+
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    /* 触发 hasLayout */
+    zoom: 1;
+}
+
+.ico {
+    background-size: 100% 100%;
+    background-position: left top;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.half-width {
+    width: 50%;
+}
+.van-tabbar-item--active {
+    color: rgb(222, 127, 239) !important;
+}
+
+
+.van-checkbox__control:checked+.van-icon-success {
+    border-color: #de7fef !important;
+    background-color: #de7fef !important;
+}
+
+.van-checkbox {
+    display: inline-block !important;
+}
+
+.van-dialog__confirm,
+.van-dialog__confirm:active {
+    color: #de7fef !important;
+}
+
+//省市区picker
+.van-picker__toolbar{
+    font-size: 18px;
+}
+.van-picker__cancel{
+  color:#666 !important;
+}
+.van-picker__confirm{
+  color:#de7fef !important;
+} 
+.van-picker-column li{
+  font-size: 16px !important;
+}
+
+
+
+textarea::-webkit-input-placeholder {
+    color:#999;
+  }
+
+.star-5{
+    background-position: 0 !important;
+}
+.star-4{
+    background-position: -0.48rem 0 !important;
+}
+.star-3{
+    background-position: -0.48*2rem 0 !important;
+}
+.star-2{
+    background-position: -0.72*2rem 0 !important;
+}
+.star-1{
+    background-position: -0.96*2rem 0 !important;
+}
+.star-0{
+    background-position: -1.2*2rem 0 !important;
+}
+
+/* 遮盖层 */
+.shadow{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+/*文字溢出*/
+.text-over {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bg-fff{
+  background: #fff;
+}
+
+/*单元格*/
+.cell{
+  height: 1.17rem;
+  width: 100%;
+  padding: 0 0.41rem;
+  line-height: 1.17rem;
+  position: relative;
+  color: #1a1a1a;
+  border-bottom: 1px #ccc solid;
+  font-size: 0.37rem;
+  span{
+    margin-right: 0.27rem;
+    color: #333;
+  }
+  .arrow_gray{
+    position: absolute;
+    right: 0.32rem;
+    width: 0.21rem;
+    height: 0.39rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform:translateY(-50%);
+  }
+}
+
+//性别样式
+.male_w {
+    display: inline-block;
+    margin-left: 0.267rem;
+    width: 0.3467rem;
+    height: 0.3467rem;
+    background-image: url('../assets/common_icon_male.png');
+    background-size: 100%;
+}
+
+.female_w {
+    display: inline-block;
+    margin-left: 0.267rem;
+    width: 0.3467rem;
+    height: 0.3467rem;
+    background-image: url('../assets/common_icon_female.png');
+    background-size: 100%;
+}
+
+.male {
+    @extend .male_w;
+    background-image: url('../assets/common_icon_male_c.png');
+}
+
+.female {
+    @extend .male_w;
+    background-image: url('../assets/common_icon_female_c.png');
+}
+
+//覆盖zan-ui样式
+.van-actionsheet {
+    background-color: #d2d2d3!important;
+}
+
+//底部按钮
+.submit__btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 1.307rem;
+    line-height: 1.307rem;
+    width: 100%;
+    font-size: 0.435rem;
+    text-align: center;
+    color: #fff;
+    background: #ccc;
+
+    &.active {
+        background-image: linear-gradient(135deg, #fe9bba 0%, #de7fef 100%);
+    }
+}
+
+//提交按钮
+.finish__btn {
+    margin: 0.667rem 0.4rem;
+    width: calc(100% - 0.8rem);
+    height: 1.2rem;
+    line-height: 1.1733rem;
+    font-size: 0.493rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 1.2rem;
+    background: #ccc;
+
+    &.active {
+        background: linear-gradient(135deg, #fe9bba 0%, #de7fef 100%);
+    }
+}
+
+
+//.5px像素线
+.border-1px {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        width: 200%;
+        border-bottom: 1px solid #ccc;
+        transform: scale(0.5);
+        transform-origin: center;
+    }
+}

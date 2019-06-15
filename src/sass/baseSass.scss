@@ -1,0 +1,188 @@
+$main-color: #fc4518;
+$price-color:rgb(254, 68, 54);
+$text-color:rgb(26, 26, 26);
+$text-color2:rgb(102, 102, 102);
+//$border-color:rgb(204, 204, 204);
+$border-color:#eee;
+$label-color:rgb(222, 127, 239);
+
+
+
+
+$fs28:0.37rem;
+$fs30:0.4rem;
+$pd:0.21rem 0.32rem;
+$pdlr24:0 0.32rem;
+
+@function box($font) {
+  @return $font / 75 + rem;
+}
+
+@mixin headerStyle{
+    position:fixed;
+    z-index:999;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1.17rem;
+    line-height: 1.17rem;
+    padding: 0 0.4rem;
+    text-align:center;
+    color: #fff;
+    @include bg-color;
+}
+
+//离顶部距离
+@mixin headerSpace{
+    position: relative;
+    top: 1.17rem;
+    width: 100%;
+}
+
+@mixin mask{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 9999;
+}
+
+
+//商品标签样式
+@mixin goodslabel{
+    font-size: 0.32rem;
+    text-align: center;
+    padding: 0 2px;
+    border :1px solid rgb(222, 127, 239);
+    border-radius: 2px;
+    color: rgb(222, 127, 239);
+}
+
+@mixin flex-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin bg-color {
+    background: -ms-linear-gradient( -45deg, rgb(254,155,186) 0%, rgb(222,127,239) 100%);
+    background: -moz-linear-gradient( -45deg, rgb(254,155,186) 0%, rgb(222,127,239) 100%);
+    background: -webkit-linear-gradient( -45deg, rgb(254,155,186) 0%, rgb(222,127,239) 100%);
+//  background: linear-gradient(135deg,#fe9bba 0%,#de7fef 100%);
+//  background: -webkit-linear-gradient(left, rgba(253, 154, 188, 0.90), rgba(239, 142, 211, 0.93), rgba(222, 127, 239, 1));
+//  background: -o-linear-gradient(right, rgba(253, 154, 188, 0.90), rgba(239, 142, 211, 0.93), rgba(222, 127, 239, 1));
+//  background: -moz-linear-gradient(right, rgba(253, 154, 188, 0.90), rgba(239, 142, 211, 0.93), rgba(222, 127, 239, 1));
+//  background: linear-gradient(to right, rgba(253, 154, 188, 0.90), rgba(239, 142, 211, 0.93), rgba(222, 127, 239, 1));
+
+}
+
+@mixin bottom {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    color: rgb(204, 204, 204);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+@mixin top {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid rgb(204, 204, 204);
+    color: rgb(204, 204, 204);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+//文字省略两行
+@mixin textflow-two {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+//文字省略一行
+@mixin textflow-one {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+
+@mixin footer-btn{
+    width: 100%;
+    height: 1.33rem;
+    line-height: 1.33rem;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0px;
+    display: block;
+    font-size: 0.45rem;
+}
+
+//右边箭头
+@mixin rt-arrow {
+    position: absolute;
+    right: 0.32rem;
+    width: 0.21rem;
+    height: 0.39rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    
+}
+
+//右边箭头--小
+@mixin rt-arrow-sm {
+    position: absolute;
+    right: 0.32rem;
+    width: 0.17rem;
+    height: 0.31rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    
+}
+//顶部左箭头
+@mixin lt-arrow{
+    position:absolute;
+//  left: 0.4rem;
+    width: 0.32rem;
+    height: 0.59rem;
+    top: 50%;
+    left: 0.4rem;
+    transform: translateY(-50%);
+    -webkit-transform:translateY(-50%);
+}
+
+//textarea
+@mixin textarea{
+    background: #fff;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 0.37rem;
+    color: #333;
+    line-height: 0.53rem
+}
